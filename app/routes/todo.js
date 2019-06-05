@@ -1,7 +1,7 @@
 module.exports = (app) => {
   const db = require('../../config/db');
 
-  app.get('/todo', (req, res) => {
+  app.get('/', (req, res) => {
     res.render('todo');
   });
 
@@ -11,9 +11,9 @@ module.exports = (app) => {
     });
   });
 
-  app.post('/todo', (req, res) => {
+  app.post('/', (req, res) => {
     db.ref('/to-do').push(req.body);
-    res.redirect('/todo');
+    res.redirect('/');
   });
 
 }

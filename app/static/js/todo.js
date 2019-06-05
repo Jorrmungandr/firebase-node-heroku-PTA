@@ -25,7 +25,6 @@ setInterval(() => {
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = '';
     const todo = JSON.parse(res);
-    console.log('todo');
 
     Object.keys(todo).reverse().forEach((key) => {
       todoList.innerHTML += `
